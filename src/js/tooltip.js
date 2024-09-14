@@ -6,7 +6,8 @@ export class Tooltip {
     }
 
     showTooltip(title, message, element) {
-        const {right, top} = element.getBoundingClientRect(); 
+        const {left, top, width} = element.getBoundingClientRect();
+        console.log(element.getBoundingClientRect()); 
         const tooltipElement = document.createElement('div');
         const elementTitle = document.createElement('div');
         const elementBody = document.createElement('div');
@@ -18,7 +19,7 @@ export class Tooltip {
         elementBody.classList.add('element-body');
         elementBody.textContent = message;
         tooltipElement.appendChild(elementBody);
-        tooltipElement.style.right = right - right/5.7 + 'px';
+        tooltipElement.style.left = left + width/16 + 'px';
         tooltipElement.style.top = top - top/2.5 + 'px';
 
 
