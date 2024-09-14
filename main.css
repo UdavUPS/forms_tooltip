@@ -31,7 +31,8 @@ body {
     }
 .tooltip-element {
     position: absolute;
-    width: 150px;
+    /* width: 150px; */
+    min-width: 9vw;
     background-color: #fff;
     border: 1px solid black;
     border-radius: 5px;
@@ -51,7 +52,9 @@ body {
 .tooltip-element::before, .tooltip-element::after {
     content: ''; 
     position: absolute;
-    left: 65px; bottom: -18px;
+    /* left: 65px; */
+    left: calc(9vw / 2.5); 
+    bottom: -18px;
     border: 10px solid transparent;
     border-top: 10px solid rgb(0, 0, 0);
    }
